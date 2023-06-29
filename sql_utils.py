@@ -73,7 +73,7 @@ def save_comments_data(comments_data):
             try:
                 connection.execute(
                     text(
-                        "INSERT INTO videos (comment_id, video_id, channel_id, comment_text, comment_author, comment_published_date) \
+                        "INSERT INTO comments (comment_id, video_id, channel_id, comment_text, comment_author, comment_published_date) \
                             VALUES (:comment_id, :video_id, :channel_id, :comment_text, :comment_author, STR_TO_DATE(:comment_published_date,'%Y-%m-%dT%H:%i:%sZ'))"
                     ),
                     comments_data[i:i+50]
