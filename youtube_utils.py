@@ -3,7 +3,7 @@ from datetime import datetime
 import isodate
 
 def youtube_data_api():
-    api_key = "AIzaSyCDUFd06Wxjq2cvq1YzVeQevf3BBbUDTPU"
+    api_key = "#######"
     youtube = build("youtube", "v3", developerKey=api_key)
     return youtube
 
