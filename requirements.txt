@@ -1,0 +1,6 @@
+pymongo
+sqlalchemy
+streamlit
+google-api-python-client
+isodate
+mysql-connector-python
