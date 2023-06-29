@@ -3,7 +3,7 @@ from datetime import datetime
 import isodate
 
 def youtube_data_api():
-    api_key = "########"
+    api_key = "AIzaSyCDUFd06Wxjq2cvq1YzVeQevf3BBbUDTPU"
     youtube = build("youtube", "v3", developerKey=api_key)
     return youtube
 
@@ -101,7 +101,7 @@ def get_video_details(youtube, video_ids, video_playlist_map):
                 tags = video['snippet'].get('tags'),
                 thumbnail = video['snippet']['thumbnails']['default']['url'],
                 description = video['snippet']['description'],
-                published_date = datetime.strptime(video['snippet']['publishedAt'], "%Y-%m-%dT%H:%M:%SZ"),
+                published_date = video['snippet']['publishedAt'],
                 duration = isodate.parse_duration(video['contentDetails']['duration']).seconds,
                 views = int(video['statistics'].get('viewCount', 0)),
                 likes = int(video['statistics'].get('likeCount', 0)),

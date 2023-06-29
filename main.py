@@ -144,10 +144,10 @@ def fetch_data_from_youtube():
                 continue
             videos_details.append(item)
     
-    # progress_text = "Getting comments for videos, please wait..."
-    # for i in range(total_videos):
-    #     progress_bar.progress((i/total_videos), progress_text)
-    #     comments_data.extend(yt.get_comments(youtube, video_ids[i], channel_id))
+    progress_text = "Getting comments for videos, please wait..."
+    for i in range(total_videos):
+        progress_bar.progress((i/total_videos), progress_text)
+        comments_data.extend(yt.get_comments(youtube, video_ids[i], channel_id))
     data_fetch_complete = True
     render_data()
 
